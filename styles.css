@@ -1,0 +1,179 @@
+/*Criação de variáves para atribuir aos elementos*/
+:root {                                  
+    --branco-principal:#FFFFFF;
+    --cinza-secundario:#C0C0C0;
+    --botao-azul:#167BF7;
+    --cor-de-fundo:#00030C;
+    --fonte-principal:'Inter';
+    --botao-azul-efeito:#3c92fa;
+    --active-click-efeito:#6be9ff;
+
+
+}
+
+/*body é o pai de todos, tudo o que estiver configurado aqui será aplicado par aos filhos, dependendo do projeto melhor aplicar igual para todos e depois trabalhar caso a caso.*/
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/*O seletor * pega todos os elementos html e seleciona todos eles e coloca o estilo que determinarmos , não vai tão afundo quanto o root */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    background-image: url("img/Background.png"); /*se a imagem for importante para o usuário colocar no html, se for ilustrativa colocar no styles.css*/
+    background-repeat: no-repeat; /*não reptir a imagem para preencher o contain*/
+    background-size: contain; /*no caso contain aqui é a SECTION*/
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height:100vh ; /*VH = view port detectar a altura do dispositivo/pagina e irá usar no caso 100% como foi solicitado*/
+    display: grid;
+    grid-template-columns: 50%; /*estava por linhas e agora está definido por colunas*/
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700 ;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0; /*funciona como relogio no sentido horario* cima, direita, baixo , esquerda*/
+}
+
+
+.container__botao {
+    background-color: var(--botao-azul); /*cor de fundo do botao*/
+    border-radius: 5px; /*borda redonda do botao*/
+    padding: 1em; /*medida EM é uma medida relativa */
+    color: var(--branco-principal); /*cor da fonte*/
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__caixa {
+    margin: 0 6em; /*cima baixo , esquerda direita*/
+}
+
+/*botão transparante*/
+.botao_secundario {
+    background-color:transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+/*container secundario*/
+
+.secundario__imagem {
+    width: 70%;
+
+}
+
+.container__secundario {
+    display: grid;
+    grid-template-columns: 50% 50%; /*estava por linhas e agora está definido por colunas*/
+    align-items: center;
+    margin: 10em 10em ;
+
+   
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+    font-size:16px;
+
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+    
+    
+}
+
+.dispositivos__lista {
+    display: flex; /*flex = diferente do grid , flex é outra forma de deixar os itens um ao lado do outros, flex box é bastante utilizada*/
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0 ;
+}
+.dispositivos{
+    text-align: center;
+    
+}
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+/*footer*/
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__logo {
+    margin: 0 6em;
+}
+.rodape__lista {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin: 2em 0;
+    font-size: 16px;   
+}
+
+.lista__link a{
+    color: var(--branco-principal);
+    display: flex;
+    margin-left: 2em;
+    text-decoration: none;
+}
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+.lista__link a:active {
+    color:var(--active-click-efeito);
+}
+
+
+.rodape__texto {
+    text-align: center;
+    font-size: 14px;
+    color: var(--cinza-secundario);
+    margin: 1em 0;
+}
